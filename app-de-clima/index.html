@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body, .weather{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body{
+            background-color: #27282B;
+        }
+        input{
+            margin: 3em 1em;
+            width: 250px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            padding: 1.2em;
+        }
+        
+        input:focus{
+            border: none;
+            outline: 1px solid rgb(167, 167, 167);
+            background-color: rgb(89, 89, 89);
+        }
+
+        input:focus::placeholder, h2, small, input:focus{
+            color: rgb(219, 219, 219);
+        }
+
+        .weather small{
+            margin: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form">
+        <input type="search" 
+               name="search" 
+               id="search" 
+               placeholder="Pesquisar por Localização" 
+               autocomplete="off"
+        >
+    </form>
+    <main id="main"></main>
+
+    <script>
+        const apiKey = 'bb9ade50219af052606f38585e02524d'
+
+        const main = document.getElementById('main')
+        const form = document.getElementById('form')
+        const search = document.getElementById('search')
+
+        const url = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+
+        async function getWeatherByLocation(city){
+            const resp = await fetch(url(city), {
+                origin: 'cros'
+            })
+            const respData = await resp.json()
+            addWeatherToPage(respData)
+        }
+
+        function addWeatherToPage(data){
+            const temp = Ktoc(data.main.temp)
+
+            const weather = document.createElement('div')
+            weather.classList.add('weather')
+
+            weather.innerHTML = `
+            <h2>
+                <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"/>
+                ${temp}°C
+                <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"/>
+            </h2>
+            <small>${data.weather[0].main}</small>
+            `
+            main.innerHTML = ''
+            main.appendChild(weather)
+        }
+
+        function Ktoc(k){
+            return Math.floor(k - 273.15)
+        }
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault()
+            const city = search.value
+
+            if(city){
+                getWeatherByLocation(city)
+            }
+        })
+    </script>
+</body>
+</html>
