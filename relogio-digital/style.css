@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(38, 38, 38);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#relogio{
+    margin: .6em;
+    text-align: center;
+    max-width: 500px;
+    width: 100vw;
+    color: white;
+    font-size: 55pt;
+    padding: 20px;
+    border: 2px solid salmon;
+    border-radius: 5px;
+}
