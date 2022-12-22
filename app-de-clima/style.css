@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body, .weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    background-color: #27282B;
+}
+input{
+    margin: 3em 1em;
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 1.2em;
+}
+
+input:focus{
+    border: none;
+    outline: 1px solid rgb(167, 167, 167);
+    background-color: rgb(89, 89, 89);
+}
+
+input:focus::placeholder, h2, small, input:focus{
+    color: rgb(219, 219, 219);
+}
+
+.weather small{
+    margin: 1em;
+}

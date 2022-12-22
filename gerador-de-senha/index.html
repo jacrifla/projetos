@@ -5,69 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senha</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        body{
-            background-color: #343434;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container{
-            /* background-color: black; */
-            background: radial-gradient(rgba(255, 252, 240, 0.157), black 75%);
-            color: white;
-            width: 400px;
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            padding: 1em;
-            border-radius: 10px;
-        }
-        input{
-            width: 200px;
-            padding: .5em;
-            border: none;
-            outline: none;
-            border-radius: 5px;
-            text-align: center;
-        }
-        input[type=number]:hover{
-            background-color: transparent;
-            outline: 2px white solid;
-            color: white;
-        }
-        .botoes{
-            width: 200px;
-            display: flex;
-            justify-content: space-between;
-
-        }
-        .btn{
-            padding: .4em 1em;
-            width: 45%;
-            height: 2.5em;
-            border-radius: 3px;
-            border: none;
-            outline: none;
-            font-weight: bold;
-
-        }
-        .btn:hover{
-            background: transparent;
-            color: white;
-            outline: 1px solid white;
-
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -81,27 +19,6 @@
         </div>
     </div>
 
-    <script>
-        let btn = document.querySelectorAll('.btn')
-        let saida = document.getElementById('saida')
-
-
-        function gerarSenha(){
-            let caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#_-*&%+=/'
-            let comprimento = document.getElementById('comprimento').value - 1
-            let senha = ''
-            for (let i = 0; i <= comprimento; i++){
-                let randomizar = Math.floor(Math.random() * caracteres.length)
-                senha += caracteres.substring(randomizar, randomizar + 1)
-            }
-            saida.value = senha
-        }
-        function copiarSenha(){
-            saida.select()
-            document.execCommand('copy')
-        }
-        btn[0].addEventListener('click', gerarSenha)
-        btn[1].addEventListener('click', copiarSenha)
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

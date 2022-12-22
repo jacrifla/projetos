@@ -5,59 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
-    <style>
-        *{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 0;
-            box-sizing: border-box;
-            padding: 0;
-        }
-        h2{
-            text-align: center;
-            text-transform: uppercase;
-            color: white;
-            font-weight: lighter;
-            margin-top: 1em;
-        }
-        body{
-            display: flex;
-            justify-content: center;
-            background-color: #343434;
-        }
-        .container{
-            background-color: #292929;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 350px;
-            height: 400px;
-            border-radius: 10px;
-        }
-        button {
-            margin: 5px;
-            width: 10em;
-            height: 2.5em;
-            background-color: #5c8b8d;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-        }
-        button:hover{
-            background-color: #292929;
-            color: azure;
-            outline: 1px solid azure;
-        }
-        p{
-            color: white;
-            font-size: 25px;
-            margin: 1em;
-            border: 2px solid #6bb5b8;
-            border-radius: 5px;
-            padding: 1em;
-        }
-       
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -70,55 +18,6 @@
         <button id="btn-reset">Reset</button>
     </div>
 
-    <script>
-        window.onload = function(){
-            let segundos = 00
-            let decimos = 00
-            let acrescentaDecimos = document.getElementById('decimos')
-            let acrescentaSegundos = document.getElementById('segundos')
-            let botaoStart = document.getElementById('btn-start')
-            let botaoStop = document.getElementById('btn-stop')
-            let botaoReset = document.getElementById('btn-reset')
-            let intervalo
-
-            botaoStart.onclick = function(){
-                clearInterval(intervalo)
-                intervalo = setInterval(startTimer, 10)
-            }
-
-            botaoStop.onclick = function(){
-                clearInterval(intervalo)
-            }
-            botaoReset.onclick = function(){
-                clearInterval(intervalo)
-                decimos = '00'
-                segundos = '00'
-                acrescentaDecimos.innerHTML = decimos
-                acrescentaSegundos.innerHTML = segundos
-            }
-
-            function startTimer(){
-                decimos++
-
-                if(decimos <= 9){
-                    acrescentaDecimos.innerHTML = '0' + decimos
-                }
-                if(decimos > 9){
-                    acrescentaDecimos.innerHTML = decimos
-                }
-                if(decimos > 99){
-                    console.log('segundos');
-                    segundos ++
-                    acrescentaSegundos.innerHTML = '0' + segundos
-                    decimos = 0
-                    acrescentaDecimos.innerHTML = '0' + 0
-                }
-
-                if(segundos > 9){
-                    acrescentaDecimos.innerHTML = segundos
-                }
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
