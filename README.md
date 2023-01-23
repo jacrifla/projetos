@@ -12,5 +12,6 @@
 * [Extensão](https://jacrifla.github.io/projetos/manual_dev/projeto-extensao)
 * [Tela Login](https://jacrifla.github.io/projetos/manual_dev/tela-login)
 * [Trailer Mario](https://jacrifla.github.io/projetos/mapa_dev/projeto-mario)
+* [Trailer Homem Formiga 3](https://jacrifla.github.io/projetos/mapa_dev/prj-hfq)
 * [Cards Pokemon](https://jacrifla.github.io/projetos/mapa_dev/projeto-pokemon)
 * [Relogio Digital](https://jacrifla.github.io/projetos/relogio-digital)
