@@ -15,4 +15,4 @@
 * [Trailer Homem Formiga 3](https://jacrifla.github.io/projetos/mapa_dev/prj-hfq)
 * [Cards Pokemon](https://jacrifla.github.io/projetos/mapa_dev/projeto-pokemon)
 * [Relogio Digital](https://jacrifla.github.io/projetos/relogio-digital)
-* [Listagem Pokémon](https://jacrifla.github.io/projetos/projeto-listagem-pokemon)
+* [Listagem Pokémon](https://jacrifla.github.io/projetos/mapa_dev/projeto-listagem-pokemon)
