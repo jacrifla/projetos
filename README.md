@@ -14,7 +14,7 @@ Alguns projetos pegos da internet para aprendizado de javascript
 * [Tela Login](https://jacrifla.github.io/projetos/manual_dev/tela-login)
 
 * [Trailer Homem Formiga 3](https://jacrifla.github.io/projetos/mapa_dev/prj-hfq)
-* [X-Men](https://jacrifla.github.io/projetos/mapa_dev/mapa_dev/prj-xmen)
+* [X-Men](https://jacrifla.github.io/projetos/mapa_dev/prj-xmen)
 * [Listagem Pokémon](https://jacrifla.github.io/projetos/mapa_dev/projeto-listagem-pokemon)
 * [Trailer Mario](https://jacrifla.github.io/projetos/mapa_dev/projeto-mario)
 * [Cards Pokemon](https://jacrifla.github.io/projetos/mapa_dev/projeto-pokemon)
