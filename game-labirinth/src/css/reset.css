@@ -1,0 +1,21 @@
+button {
+    display: inline-block;
+    border: none;
+    padding: none;
+    margin: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:hover, button:focus {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+button:active {
+    transform: scale(1);
+    -webkit-appearance: none;
+}
