@@ -18,6 +18,7 @@ Alguns projetos pegos da internet para aprendizado de javascript
 * [Listagem Pokémon](https://jacrifla.github.io/projetos/mapa_dev/projeto-listagem-pokemon)
 * [Trailer Mario](https://jacrifla.github.io/projetos/mapa_dev/projeto-mario)
 * [Cards Pokemon](https://jacrifla.github.io/projetos/mapa_dev/projeto-pokemon)
+* [One Piece](https://jacrifla.github.io/projetos/mapa_dev/projeto-one-piece)
 
 * [Relogio Digital](https://jacrifla.github.io/projetos/relogio-digital)
 * [Temporizador](https://jacrifla.github.io/projetos/Stopwatch/index.html)
