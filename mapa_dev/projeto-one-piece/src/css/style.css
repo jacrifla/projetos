@@ -62,7 +62,6 @@ main .personagem .imagem {
     width: 230px;
     height: 100px;
     margin-bottom: 35px;
-    z-index: 0;
 }
 
 .botoes {
@@ -81,7 +80,7 @@ main .personagem .imagem {
 
 .botoes .botao {
     border: none;
-    background: none;
+    background: #000;
     cursor: pointer;
     border-radius: 50%;
 }
