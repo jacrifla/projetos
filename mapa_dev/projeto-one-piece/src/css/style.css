@@ -5,28 +5,27 @@ body {
     overflow: hidden;
 }
 
-main ::after {
+main::after {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     min-height: 100vh;
     width: 80vw;
-    
-    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
 
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
 }
 
-.personagem {
+main .personagem {
     display: none;
     height: 100vh;
 }
 
-.personagem.selecionado {
+main .personagem.selecionado {
     display: block;
 }
 
-.personagem .imagem {
+main .personagem .imagem {
     width: 100%;
     height: 100%;
     object-fit: cover;
